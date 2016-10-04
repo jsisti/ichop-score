@@ -47,27 +47,11 @@
 
         <form>
             <!-- ICHOP3 - GCS -->
-            <div class="form-group" id="ichop-3-gcs-score">
-                <label>Glasgow Coma Scale (GCS) Score</label>
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="option-ichop-3-gcs" id="option-ichop-3-gcs-1" value="2" checked>
-                        3 - 8
-                    </label>
-                </div>
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="option-ichop-3-gcs" id="option-ichop-3-gcs-2" value="1">
-                        9 - 12
-                    </label>
-                </div>
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="option-ichop-3-gcs" id="option-ichop-3-gcs-3" value="0">
-                        13 - 15
-                    </label>
-                </div>
+            <div class="form-group">
+                <label for="ichop-3-gcs-score">Glasgow Coma Scale (GCS) Score</label>
+                <input type="number" class="form-control" id="ichop-3-gcs-score" placeholder="0">
             </div>
+
             <!-- ICHOP3 - NIHSS -->
             <div class="form-group" id="ichop-3-nihss-score">
                 <label>NIH Stroke Scale (NIHSS) Score</label>
@@ -135,7 +119,7 @@
 
             <!-- ICHOP3 - premorbid MRS -->
             <div class="form-group" id="ichop-3-mrs-score">
-                <label>Modified Rankin Scale (MRS) Score</label>
+                <label>premorbid Modified Rankin Scale (MRS) Score</label>
                 <div class="form-check">
                     <label class="form-check-label">
                         <input type="radio" class="form-check-input" name="option-ichop-3-mrs" id="option-ichop-3-mrs-1" value="5" checked>
@@ -184,27 +168,11 @@
         </h3>
         <form>
             <!-- ICHOP3 - GCS -->
-            <div class="form-group" id="ichop-12-gcs-score">
-                <label>Glasgow Coma Scale (GCS) Score</label>
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="option-ichop-12-gcs" id="option-ichop-12-gcs-1" value="6" checked>
-                        3 - 8
-                    </label>
-                </div>
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="option-ichop-12-gcs" id="option-ichop-12-gcs-2" value="3">
-                        9 - 12
-                    </label>
-                </div>
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="option-ichop-12-gcs" id="option-ichop-12-gcs-3" value="0">
-                        13 - 15
-                    </label>
-                </div>
+            <div class="form-group">
+                <label for="ichop-12-gcs-score">Glasgow Coma Scale (GCS) Score</label>
+                <input type="number" class="form-control" id="ichop-12-gcs-score" placeholder="0">
             </div>
+
             <!-- ICHOP3 - NIHSS -->
             <div class="form-group" id="ichop-12-nihss-score">
                 <label>NIH Stroke Scale (NIHSS) Score</label>
@@ -248,7 +216,7 @@
 
             <!-- ICHOP3 - premorbid MRS -->
             <div class="form-group" id="ichop-12-mrs-score">
-                <label>Modified Rankin Scale (MRS) Score</label>
+                <label>premorbid Modified Rankin Scale (MRS) Score</label>
                 <div class="form-check">
                     <label class="form-check-label">
                         <input type="radio" class="form-check-input" name="option-ichop-12-mrs" id="option-ichop-12-mrs-1" value="20" checked>
@@ -257,31 +225,37 @@
                 </div>
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="option-ichop-12-mrs" id="option-ichop-12-mrs-2" value="16">
+                        <input type="radio" class="form-check-input" name="option-ichop-12-mrs" id="option-ichop-12-mrs-2" value="20" checked>
+                        5
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="option-ichop-12-mrs" id="option-ichop-12-mrs-3" value="16">
                         4
                     </label>
                 </div>
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="option-ichop-12-mrs" id="option-ichop-12-mrs-3" value="12">
+                        <input type="radio" class="form-check-input" name="option-ichop-12-mrs" id="option-ichop-12-mrs-4" value="12">
                         3
                     </label>
                 </div>
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="option-ichop-12-mrs" id="option-ichop-12-mrs-4" value="8">
+                        <input type="radio" class="form-check-input" name="option-ichop-12-mrs" id="option-ichop-12-mrs-5" value="8">
                         2
                     </label>
                 </div>
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="option-ichop-12-mrs" id="option-ichop-12-mrs-5" value="4">
+                        <input type="radio" class="form-check-input" name="option-ichop-12-mrs" id="option-ichop-12-mrs-6" value="4">
                         1
                     </label>
                 </div>
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="option-ichop-12-mrs" id="option-ichop-12-mrs-6" value="0">
+                        <input type="radio" class="form-check-input" name="option-ichop-12-mrs" id="option-ichop-12-mrs-7" value="0">
                         0
                     </label>
                 </div>

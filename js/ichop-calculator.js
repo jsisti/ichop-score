@@ -50,14 +50,15 @@ $(document).ready(function () {
 
     function calculateIchop3Score() {
         // Get input values
-        var gcsScore = parseInt($("input[name=option-ichop-3-gcs]:checked").val());
+        var rawGcsScore = parseInt($("#ichop-3-gcs-score").val()) || 0;
+        var gcsScore = rawGcsScore < 8 ? 2 : gcsScore < 12 ? 1 : 0;
         var nihssScore = parseInt($("input[name=option-ichop-3-nihss]:checked").val());
-        var apache2Score = parseInt($("#ichop-3-apache-ii-score").val()) || 0;
+        var apache2Score = (parseInt($("#ichop-3-apache-ii-score").val()) || 0) - rawGcsScore;
         var hemVol = parseInt($("input[name=option-ichop-3-hem-vol]:checked").val());
         var mrsScore = parseInt($("input[name=option-ichop-3-mrs]:checked").val());
 
         var rawIchop3Score = ((20.0 * gcsScore) + (nihssScore) + (2.0 * apache2Score) + (1.5 * hemVol) + (8.0 * mrsScore)) / 11.0;
-        var roundedIchop3Score = Math.round(rawIchop3Score);
+        var roundedIchop3Score = Math.round(rawIchop3Score) > 0 ? Math.round(rawIchop3Score) : 0;
         var pctPoorOutcome = ichop3Outcomes[roundedIchop3Score];
 
         var resultText = roundedIchop3Score + " points. " + pctPoorOutcome + " % where poor 3 month outcomes were present.";
@@ -69,13 +70,14 @@ $(document).ready(function () {
     }
     function calculateIchop12Score() {
         // Get input values
-        var gcsScore = parseInt($("input[name=option-ichop-12-gcs]:checked").val());
+        var rawGcsScore = parseInt($("#ichop-12-gcs-score").val()) || 0;
+        var gcsScore = rawGcsScore < 8 ? 6 : gcsScore < 12 ? 3 : 0;
         var nihssScore = parseInt($("input[name=option-ichop-12-nihss]:checked").val());
-        var apache2Score = parseInt($("#ichop-12-apache-ii-score").val()) || 0;
+        var apache2Score = (parseInt($("#ichop-12-apache-ii-score").val()) || 0) - rawGcsScore;
         var mrsScore = parseInt($("input[name=option-ichop-12-mrs]:checked").val());
 
         var rawIchop12Score = gcsScore + nihssScore + 2.0 * apache2Score + mrsScore;
-        var roundedIchop12Score = Math.round(rawIchop12Score);
+        var roundedIchop12Score = Math.round(rawIchop12Score) > 0 ? Math.round(rawIchop12Score) : 0;
         var pctPoorOutcome = ichop3Outcomes[roundedIchop12Score];
 
         var resultText = roundedIchop12Score + " points. " + pctPoorOutcome + " % where poor 12 month outcomes were present.";
